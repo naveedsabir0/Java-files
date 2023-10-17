@@ -2,7 +2,7 @@ import java.util.Iterator;
 /**
  * Write a description of class ArrayPractice here.
  * 
- * @author Abdul Razak 
+ * @author Naveed Sabir 
  * @version 1.0
  */
 public class ArrayPractice

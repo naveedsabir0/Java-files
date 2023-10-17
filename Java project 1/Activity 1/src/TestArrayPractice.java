@@ -1,7 +1,7 @@
 
 /**
  * A simple tester class to test the ArrayPractice class methods
- * @author A. Razak
+ * @author Naveed Sabir
  * version 17/02/2019
  */
 

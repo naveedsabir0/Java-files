@@ -2,7 +2,7 @@
 /**
  * Simple class that records the name and age of a person
  * 
- * @author Abdul Razak 
+ * @author Naveed Sabir 
  * @version 1.0
  */
 public class Person
