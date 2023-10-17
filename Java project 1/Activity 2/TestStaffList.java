@@ -1,6 +1,6 @@
 /**
  * A simple tester class to test the StaffList class methods
- * @author A. Razak
+ * @author Naveed Sabir
  * version 17/03/2019
  */
 
