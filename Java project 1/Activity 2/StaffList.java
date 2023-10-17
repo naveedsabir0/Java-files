@@ -3,7 +3,7 @@
  * A simple class to track the staff working for a small company. It
  * uses an array to store the name and age of each member of staff.
  * 
- * @author Abdul Razak 
+ * @author Naveed Sabir 
  * @version 1.0
  */
 public class StaffList
