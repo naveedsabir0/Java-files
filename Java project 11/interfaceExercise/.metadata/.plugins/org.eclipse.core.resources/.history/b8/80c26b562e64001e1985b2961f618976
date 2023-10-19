@@ -1,0 +1,14 @@
+public class PaymentProcess {
+    public static void main(String[] args) {
+        Payable[] payments = new Payable[4];
+        payments[0] = new Invoice("Product A", null, 2, 100.0);
+        payments[1] = new Invoice("Service B", null, 0, 200.0);
+        payments[2] = new PartTimeEmployee("John", 15.0, 40);
+        payments[3] = new PartTimeEmployee("Alice", 12.0, 30);
+
+        for (Payable payment : payments) {
+            System.out.println(payment.getPaymentAmount());
+            System.out.println("Payment Amount: $" + payment.calculatePayment());
+            System.out.println();
+        }
+    }
