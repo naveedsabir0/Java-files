@@ -1,0 +1,21 @@
+public class PaymentProcess {
+    public static void main(String[] args) {
+        // Create an array or collection to store Payable objects
+        Payable[] payments = new Payable[4];
+
+        // Populate the array with Invoice and Employee objects
+        payments[0] = new Invoice("123", "Widget", 5, 9.99);
+        payments[1] = new Invoice("456", "Gadget", 10, 4.99);
+        payments[2] = new PartTimeEmployee("Nick", "Abraham", "123-45-6789", 500.0);
+        payments[3] = new PartTimeEmployee("George", "Washington", "987-65-4321", 600.0);
+
+        // Calculate and print payment amounts polymorphically
+        for (Payable payment : payments) {
+            System.out.println("Payment details:");
+            payment.printDetails(); // Polymorphic call to printDetails
+            double paymentAmount = payment.getPaymentAmount(); // Polymorphic call to getPaymentAmount
+            System.out.println("Payment amount: " + paymentAmount);
+            System.out.println();
+        }
+    }
+}
