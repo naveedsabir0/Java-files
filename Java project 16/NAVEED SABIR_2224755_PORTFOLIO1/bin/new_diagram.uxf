@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1.0">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>232</x>
+      <y>40</y>
+      <w>472</w>
+      <h>344</h>
+    </coordinates>
+    <panel_attributes>::Appointment
+--
+-name: String
+-purpose: String
+-date: Date
+-time: Time
+-room: MeetingRoom
+--
++Appointment(String name, String purpose, Date date, Time time, MeetingRoom room): ctor
++Appointment(): ctor
++Appointment(Appointment other): ctor
++setName(String name): void
++setPurpose(String purpose): void
++setDate(Date date): void
++setTime(Time time): void
++setRoom(MeetingRoom room): void
++getName(): String
++getPurpose(): String
++getDate(): Date
++getTime(): Time
++getRoom(): MeetingRoom
++toString(): String
++clone(): Appointment
++compareTo(Appointment other): int
++compare(Appointment appointment1, Appointment appointment2): int
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>456</x>
+      <y>440</y>
+      <w>208</w>
+      <h>248</h>
+    </coordinates>
+    <panel_attributes>::Date
+--
+-day: int
+-month: int
+-year: int
+--
++Date(int day, int month, int year): ctor
++Date(): ctor
++Date(Date other): ctor
++setDay(int day): void
++setMonth(int month): void
++setYear(int year): void
++getDay(): int
++getMonth(): int
++getYear(): int
++clone(): Date
++toString(): String
++compareTo(Date other): int
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>832</x>
+      <y>136</y>
+      <w>224</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>::MeetingRoom
+--
+-room: String
+--
++MeetingRoom(String room): ctor
++MeetingRoom(): ctor
++MeetingRoom(MeetingRoom other): ctor
++setRoom(String room): void
++getRoom(): String
++clone(): MeetingRoom
++toString(): String
++compareTo(MeetingRoom other): int
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>840</x>
+      <y>464</y>
+      <w>168</w>
+      <h>208</h>
+    </coordinates>
+    <panel_attributes>::Time
+--
+-hour: int
+-minute: int
+--
++Time(int hour, int minute): ctor
++Time(): ctor
++Time(Time other): ctor
++setHour(int hour): void
++setMinute(int minute): void
++getHour(): int
++getMinute(): int
++clone(): Time
++compareTo(Time other): int
++toString(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>656</x>
+      <y>536</y>
+      <w>200</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>230.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>920</x>
+      <y>296</y>
+      <w>24</w>
+      <h>184</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;210.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>696</x>
+      <y>200</y>
+      <w>152</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;10.0</additional_attributes>
+  </element>
+</diagram>
