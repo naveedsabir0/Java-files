@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1.0">
+  <zoom_level>5</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>30</x>
+      <y>85</y>
+      <w>255</w>
+      <h>205</h>
+    </coordinates>
+    <panel_attributes>universityproject::College
+--
+-students: ArrayList&lt;Student&gt;
+-courses: ArrayList&lt;Course&gt;
+-enrolments: ArrayList&lt;Enrolment&gt;
+-lastStudentId: int
+--
++College(): ctor
++addStudent(String firstName, String lastName, String phoneNumber): void
++printStudentDetailsById(): void
++printAllStudents(): void
++addCourse(int courseId, String title, double enrolmentFee): void
++printCourseDetailsById(): void
++printAllCourses(): void
++getStudentById(int studentId): Student
++searchAndPrintStudentsBySurname(String search): void
++searchCourseByTitle(String search): void
++removeStudentById(int studentId): boolean
++getCourseById(int courseId): Course
++removeCourseById(int courseId): boolean
++addEnrolment(int studentId, int courseId): void
++removeEnrolment(int studentId, int courseId): void
++printEnrolmentList(): void
++printEnrollmentsByDateRange(LocalDate startDate, LocalDate endDate): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>400</x>
+      <y>325</y>
+      <w>175</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>universityproject::Course
+--
+-id: int
+-title: String
+-enrolmentFee: double
+--
++Course(int id, String title, double enrolmentFee): ctor
++getCourseId(): int
++getTitle(): String
++getEnrolmentFee(): double
++setId(int id): void
++setTitle(String title): void
++setEnrolmentFee(double enrolmentFee): void
++printDetails(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>435</x>
+      <y>95</y>
+      <w>225</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>universityproject::Enrolment
+--
+-studentId: int
+-courseId: int
+-enrolmentDate: LocalDate
+--
++Enrolment(int studentId, int courseId, LocalDate enrolmentDate): ctor
++getStudentId(): int
++getCourseId(): int
++getEnrolmentDate(): LocalDate
++setStudentId(int studentId): void
++setCourseId(int courseId): void
++setEnrolmentDate(LocalDate enrolmentDate): void
++printEnrolmentDetails(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>70</x>
+      <y>360</y>
+      <w>250</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>universityproject::Student
+--
+-firstName: String
+-lastName: String
+-phoneNumber: String
+-id: int
+-nextId = 1: int
+--
++Student(String firstName, String lastName, String phoneNumber, int id): ctor
++getFirstName(): String
++getLastName(): String
++getPhoneNumber(): String
++getStudentId(): int
++setFirstName(String firstName): void
++setLastName(String lastName): void
++setPhoneNumber(String phoneNumber): void
++setId(int id): void
++printStudentDetails(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>275</x>
+      <y>0</y>
+      <w>115</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>universityproject::TesterNew
+--
+-college = new College(): College
+--
++main(String[] args): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>155</x>
+      <y>285</y>
+      <w>150</w>
+      <h>85</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+</panel_attributes>
+    <additional_attributes>10.0;10.0;280.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>180</x>
+      <y>15</y>
+      <w>105</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+</panel_attributes>
+    <additional_attributes>190.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>280</x>
+      <y>205</y>
+      <w>220</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+</panel_attributes>
+    <additional_attributes>10.0;10.0;420.0;240.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>280</x>
+      <y>100</y>
+      <w>165</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+</panel_attributes>
+    <additional_attributes>10.0;100.0;310.0;10.0</additional_attributes>
+  </element>
+</diagram>
