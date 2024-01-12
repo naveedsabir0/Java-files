@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1.0">
+  <zoom_level>4</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>212</x>
+      <y>424</y>
+      <w>152</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>::Address
+--
+-street: String
+-town: String
+-postcode: String
+--
++Address(String street, String town, String postcode): ctor
++getStreet(): String
++setStreet(String street): void
++getTown(): String
++setTown(String town): void
++getPostcode(): String
++setPostcode(String postcode): void
++toString(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>432</x>
+      <y>424</y>
+      <w>156</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>::Car
+--
+-make: String
+-model: String
+-colour: String
+-taxExpiresEndMonth: Month
+--
++Car(String make, String model, String colour): ctor
++getMake(): String
++getModel(): String
++getColour(): String
++setColour(String colour): void
++getTaxExpiresEndMonth(): Month
++setTaxExpiresEndMonth(Month taxExpiresEndMonth): void
++toString(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>220</x>
+      <y>168</y>
+      <w>352</w>
+      <h>208</h>
+    </coordinates>
+    <panel_attributes>::DVLA
+--
+-serialVersionUID = 1L: long
+-registrationInfoMap: Map&lt;RegNo, Car&gt;
+-keeperInfoMap: Map&lt;RegNo, Keeper&gt;
+-carRegistrations = new HashMap(): Map&lt;RegNo, Car&gt;
+-keeperInfo = new HashMap(): Map&lt;RegNo, Keeper&gt;
+--
++DVLA(): ctor
++addCarRegistration(RegNo regNo, Car car): void
++addKeeperInfo(RegNo regNo, Keeper keeper): void
++showAllCars(): void
++getRegistrationInfoMap(): Map&lt;RegNo, Car&gt;
++getRegistrationToKeeperMap(): Map&lt;RegNo, Keeper&gt;
++setRegistrationInfoMap(Map&lt;RegNo, Car&gt; registrationInfoMap): void
++getKeeperInfoMap(): Map&lt;RegNo, Keeper&gt;
++setKeeperInfoMap(Map&lt;RegNo, Keeper&gt; keeperInfoMap): void
++saveWarningReminderDataToFlashDrive(String filename, Map&lt;RegNo, Keeper&gt; warningData, Map&lt;RegNo, Keeper&gt; reminderData): void
++readWarningReminderDataFromFlashDrive(String filename): Map&lt;String, Map&lt;RegNo, Keeper&gt;&gt;
++getTaxExpirationReminderList(Month month): Map&lt;RegNo, Keeper&gt;
++printLetters(Map&lt;RegNo, Keeper&gt; letterList, Month month): void
++saveDataToFlashDrive(String filename): void
++readDataFromFlashDrive(String filename): DVLA
++getExpiredTaxWarningList(Month month): Map&lt;RegNo, Keeper&gt;
++getReminderMonths(): Map&lt;RegNo, Month&gt;
++getWarningMonths(): Map&lt;RegNo, Month&gt;
++getCarRegistrations(): Map&lt;RegNo, Car&gt;
++setCarRegistrations(Map&lt;RegNo, Car&gt; carRegistrations): void
++getKeeperInfo(): Map&lt;RegNo, Keeper&gt;
++setKeeperInfo(Map&lt;RegNo, Keeper&gt; keeperInfo): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>640</x>
+      <y>288</y>
+      <w>172</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>::Keeper
+--
+-forename: String
+-surname: String
+-address: Address
+--
++Keeper(String forename, String surname, Address address): ctor
++getForename(): String
++setForename(String forename): void
++getSurname(): String
++setSurname(String surname): void
++getAddress(): Address
++setAddress(Address address): void
++toString(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>668</x>
+      <y>168</y>
+      <w>76</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>::RegNo
+--
+-regNo: String
+--
++RegNo(String regNo): ctor
++getRegNo(): String
++compareTo(RegNo o): int
++equals(Object o): boolean
++hashCode(): int
++toString(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>280</x>
+      <y>372</y>
+      <w>12</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>500</x>
+      <y>372</y>
+      <w>16</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;20.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>568</x>
+      <y>320</y>
+      <w>80</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;180.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>568</x>
+      <y>208</y>
+      <w>108</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;250.0;10.0</additional_attributes>
+  </element>
+</diagram>
